@@ -16,6 +16,6 @@ def my_scheduled_job():
     jobs.do_something(path=Config.FILE_PATH_JOB_TEST)
 
 
-@crontab.job(minute="45")
+@crontab.job(minute="50")
 def my_scheduled_job_2():
-    jobs.to_tlg()
+    jobs.do_once()

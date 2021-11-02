@@ -1,6 +1,11 @@
 # flask ecosystem
 flask
 flask-crontab
+flask-restful
+flasgger
 
 # net
 requests
+
+# env
+python-dotenv

@@ -1,9 +1,16 @@
+
+import os
 import datetime as dt
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
+
+TLG_URL = os.getenv('TLG_URL')
 
 
 def to_tlg(msg):
-    url = f"https://api.telegram.org/bot279783998:AAE6cxVCwU97lSbyAu0Af6EWrhpAIUV6wno/sendMessage?chat_id=-155357321&text={msg}"
+    url = f"{TLG_URL}={msg}"
     try:
         res = requests.get(url)
         return res.status_code

@@ -1,14 +1,16 @@
 from flask import Flask
 from flask_crontab import Crontab
+from flask_restful import Api
 from config import Config
 
 
 app = Flask(__name__)
 app.config.from_object(Config)
+api = Api(app)
 crontab = Crontab(app)
 
 
-from app import routes, jobs
+from app import routes, jobs, models
 
 
 @crontab.job(minute="*")

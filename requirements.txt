@@ -2,7 +2,6 @@
 flask
 flask-crontab
 flask-restful
-flasgger
 
 # net
 requests
